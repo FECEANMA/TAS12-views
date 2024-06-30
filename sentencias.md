@@ -21,9 +21,10 @@ JOIN product p ON d.product_id = p.id
            
   - Sentencia:
   ```
-SELECT COUNT (*) AS products_total_computers
-FROM product
-WHERE category = 'Computers'
+SELECT c.title, r.code, m.fullname
+FROM event e
+JOIN conference c ON e.id = c.event_id
+JOIN register r ON c.id = r.conference_id JOIN member m ON r.member_id = m.id
   ```
   - Captura:
 <img src="./capturas/4.png"/>
