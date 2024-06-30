@@ -6,6 +6,7 @@
            
   - Sentencia:
   ```
+CREATE VIEW products_view AS
 SELECT c.client_fullname, i.create_at, p.product_description, d.quantity
 FROM client c
 JOIN invoice i ON c.id = i.client_id
@@ -21,6 +22,7 @@ JOIN product p ON d.product_id = p.id
            
   - Sentencia:
   ```
+CREATE VIEW members_register_view AS
 SELECT c.title, r.code, m.fullname
 FROM event e
 JOIN conference c ON e.id = c.event_id
