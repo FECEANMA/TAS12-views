@@ -24,4 +24,4 @@ FROM product
 WHERE category = 'Computers'
   ```
   - Captura:
-<img src="./capturas/2.png"/>
+<img src="./capturas/4.png"/>
