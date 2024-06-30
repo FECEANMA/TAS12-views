@@ -6,9 +6,11 @@
            
   - Sentencia:
   ```
-SELECT COUNT (*) AS products_total_computers
-FROM product
-WHERE category = 'Computers'
+SELECT c.client_fullname, i.create_at, p.product_description, d.quantity
+FROM client c
+JOIN invoice i ON c.id = i.client_id
+JOIN detail d ON i.id d.invoice_id
+JOIN product p ON d.product_id = p.id
   ```
   - Captura:
 <img src="./capturas/1.png"/>
